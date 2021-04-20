@@ -62,7 +62,7 @@ picture {
 
 body {
   text-rendering: optimizeSpeed;
-  background-color: red;
+  background-color: linear-gradient(#2c2d3f, #3f4164);
   max-width: 100%;
   font-family: "Overpass", sans-serif;
 }
@@ -82,15 +82,25 @@ p a {
 }
 
 .btn {
-  background-color: purple;
+  display: block;
+  background-color: white;
   color: #ff525d;
-  padding: 0.9375rem 0.9375rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 1.5625rem;
+  margin: 0.125rem;
+  font-weight: 700;
+  border: 0.0625rem solid white;
+}
+
+.btn2 {
+  background-color: transparent;
+  color: white;
 }
 
 .cta__wrap {
-  background-color: gold;
-  min-height: 31.25rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+  background-image: linear-gradient(#ff8f70, #ff3d54);
+  min-height: 34.375rem;
   max-width: 100%;
   border-radius: 0rem 0rem 0rem 6.25rem;
 }
@@ -135,7 +145,7 @@ header {
 .hero {
   max-width: 100%;
   min-height: 25rem;
-  background-color: #cc8f5e;
+  background-color: transparent;
   padding: 0rem 2.1875rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,16 +158,20 @@ header {
 .hero__container {
   max-width: 65.625rem;
   margin: 0rem auto;
-  background-color: white;
   text-align: center;
 }
 
 .hero__container h1 {
   margin-bottom: 0.9375rem;
+  color: white;
 }
 
-.hero__container ul {
-  background-color: green;
+.hero__container p {
+  color: white;
+}
+
+.hero__buttons {
+  margin-top: 3.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -47,8 +47,8 @@ $color-footer-bg: hsl(240, 10%, 16%);
 $color-body-text: hsl(207, 13%, 34%);
 
 // ========== GRADIENTS
-$gradient-sections: linear(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
-$gradient-body: linear(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+$gradient-sections: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+$gradient-body: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
 
 // ========== FONT WEIGHTS
 $weight-light: 300;
@@ -123,7 +123,7 @@ picture {
 // ========== BASE
 body {
     text-rendering: optimizeSpeed;
-    background-color: red;
+    background-color: $gradient-body;
     max-width: 100%;
     font-family: $font-primary;
   }
@@ -146,18 +146,29 @@ p a {
 }
 
 .btn {
-    background-color: purple;
+    display: block;
+    background-color: $color-neutral;
     color: $color-cta-text;
-    padding: rem(15) rem(15);
+    padding: rem(12) rem(20);
     border-radius: rem(25);
+    margin: rem(2);
+    font-weight: $weight-bold;
+    border: rem(1) solid $color-neutral;
+}
+.btn2 {
+    background-color: transparent;
+    color: $color-neutral;
 }
 
 
 .cta__wrap {
-    background-color: gold;
-    min-height: rem(500);
+    background-image: $gradient-sections;
+    
+    // background-image: url(images/bg-pattern-intro.svg);
+    min-height: rem(550);
     max-width: 100%;
     border-radius: rem(0) rem(0) rem(0) rem(100);
+
 }
 
 header {
@@ -191,7 +202,7 @@ header {
 .hero {
     max-width: 100%;
     min-height: rem(400);
-    background-color: rgb(204, 143, 94);
+    background-color: transparent;
     padding: rem(0) rem(35);
     display: flex;
     align-items: center;
@@ -199,17 +210,22 @@ header {
     &__container {
         max-width: rem(1050);
         margin: rem(0) auto;
-        background-color: rgb(255, 255, 255);
+        // background-color: rgb(255, 255, 255);
         text-align: center;
 
         h1 {
             margin-bottom: rem(15);
+            color: $color-neutral;
+        }
+
+        p {
+            color: $color-neutral;
         }
     }
 
     &__buttons {
-        min-height: rem(100);
-        background-color: green;
+        margin-top: rem(50);
+        // background-color: green;
         display: flex;
         justify-content: space-between;
     }
