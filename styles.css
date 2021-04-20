@@ -23,6 +23,12 @@ ol[role="list"] {
   list-style: none;
 }
 
+li {
+  list-style: none;
+  margin: 0rem;
+  padding: 0rem;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -58,6 +64,28 @@ body {
   text-rendering: optimizeSpeed;
   background-color: red;
   max-width: 100%;
+  font-family: "Overpass", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.875rem;
+  line-height: 2.5rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+p a {
+  font-size: 1rem;
+}
+
+.btn {
+  background-color: purple;
+  color: #ff525d;
+  padding: 0.9375rem 0.9375rem;
+  border-radius: 1.5625rem;
 }
 
 .cta__wrap {
@@ -106,8 +134,35 @@ header {
 
 .hero {
   max-width: 100%;
-  min-height: 0rem;
+  min-height: 25rem;
   background-color: #cc8f5e;
-  padding: 0rem 1.5625rem;
+  padding: 0rem 2.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__container {
+  max-width: 65.625rem;
+  margin: 0rem auto;
+  background-color: white;
+  text-align: center;
+}
+
+.hero__container h1 {
+  margin-bottom: 0.9375rem;
+}
+
+.hero__container ul {
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=styles.css.map */

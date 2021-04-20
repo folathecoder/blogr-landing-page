@@ -86,6 +86,12 @@ ol[role="list"] {
   list-style: none;
 }
 
+li {
+    list-style: none;
+    margin: rem(0);
+    padding: rem(0);
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -119,10 +125,32 @@ body {
     text-rendering: optimizeSpeed;
     background-color: red;
     max-width: 100%;
+    font-family: $font-primary;
   }
 
 // ========== TYPOGRAPHY
 
+a {
+    text-decoration: none;
+
+}
+
+h1 {
+    font-size: rem(30);
+    line-height: rem(40);
+    font-family: $font-secondary;
+}
+
+p a {
+    font-size: rem(16);
+}
+
+.btn {
+    background-color: purple;
+    color: $color-cta-text;
+    padding: rem(15) rem(15);
+    border-radius: rem(25);
+}
 
 
 .cta__wrap {
@@ -162,14 +190,31 @@ header {
 
 .hero {
     max-width: 100%;
-    min-height: rem(0);
+    min-height: rem(400);
     background-color: rgb(204, 143, 94);
-    padding: rem(0) rem(25);
+    padding: rem(0) rem(35);
+    display: flex;
+    align-items: center;
 
-    // &__container {
+    &__container {
+        max-width: rem(1050);
+        margin: rem(0) auto;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
 
-    // }
+        h1 {
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__buttons {
+        min-height: rem(100);
+        background-color: green;
+        display: flex;
+        justify-content: space-between;
+    }
 }
+
 
 
 
