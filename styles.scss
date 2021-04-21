@@ -44,7 +44,7 @@ $color-cta-bg: hsl(355, 100%, 74%);
 $color-headings: hsl(208, 49%, 24%);
 $color-neutral: hsl(0, 0%, 100%);
 $color-footer-bg: hsl(240, 10%, 16%);
-$color-body-text: hsl(207, 13%, 34%);
+$color-body-text: hsl(218, 5%, 32%);
 
 // ========== GRADIENTS
 $gradient-sections: linear-gradient(hsl(13, 100%, 77%), hsl(353, 100%, 54%));
@@ -142,8 +142,28 @@ h1 {
     font-family: $font-secondary;
 }
 
-p a {
+h2 {
+    font-size: rem(24);
+    line-height: rem(40);
+    font-weight: $weight-medium;
+    font-family: $font-secondary;
+    color: $color-headings;
+}
+
+h3 {
+    font-size: rem(22);
+    line-height: rem(29);
+    font-weight: $weight-medium;
+    font-family: $font-secondary;
+    color: $color-headings;
+}
+
+p, a {
     font-size: rem(16);
+    line-height: rem(28);
+    color: $color-body-text;
+    font-weight: $weight-light;
+    font-family: $font-primary;
 }
 
 // ========== GENERAL BUTTON STRUCTURE
@@ -174,6 +194,16 @@ p a {
     min-height: rem(550);
     max-width: 100%;
     border-radius: rem(0) rem(0) rem(0) rem(100);
+
+    @include media-query(tablet-mini) {
+        background-size: rem(2000) rem(2000);
+        background-position: rem(-400) rem(-620);
+    }
+
+    @include media-query(desktop) {
+        background-size: rem(3000) rem(3000);
+        background-position: rem(-400) rem(-1250);
+    }
 
 }
 
@@ -257,6 +287,55 @@ header {
 
 
 
+// ========== SECOND SECTION 
+
+
+.second {
+    max-width: 100%;
+    min-height: rem(0);
+    padding: rem(0) rem(25);
+    z-index: 1000;
+    margin: rem(100) rem(0);
+
+    &__container {
+         max-width: rem(1050);
+         margin: rem(0) auto;
+    }
+
+    &__heading {
+        text-align: center;
+        margin-bottom: rem(40);
+    }
+}
+
+.second__content {
+
+    &-image {
+        display: flex;
+        justify-content: center;
+
+        img {
+            margin: rem(0);
+            text-align: center;
+        }
+    }
+
+    &-texts {
+        margin: rem(50) rem(0);
+    }
+
+    &-texts > * {
+        text-align: center;
+        margin: rem(50) rem(0);
+    }
+}
+
+.second__content-text {
+    h3 {
+        margin: rem(0) rem(40) rem(20) rem(40);
+
+    }
+}
 
 
 
@@ -269,21 +348,6 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ========== COLORS
 // ========== COLORS
 // ========== COLORS
 // ========== COLORS
