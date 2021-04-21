@@ -102,9 +102,9 @@ p a {
 .cta__wrap {
   background-image: url(images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, left bottom, from(#ffa38a), to(#ff1430));
   background-image: url(images/bg-pattern-intro.svg), linear-gradient(#ffa38a, #ff1430);
-  background-size: 1200px 1200px;
+  background-size: 75rem 75rem;
   background-repeat: no-repeat;
-  background-position: -300px -220px;
+  background-position: -18.75rem -13.75rem;
   min-height: 34.375rem;
   max-width: 100%;
   border-radius: 0rem 0rem 0rem 6.25rem;

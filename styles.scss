@@ -166,9 +166,9 @@ p a {
 // ========== HEADER AND HERO WRAP TO ENABLE BACKGROUND
 .cta__wrap {
     background-image: url(images/bg-pattern-intro.svg), $gradient-sections;
-    background-size: 1200px 1200px;
+    background-size: rem(1200) rem(1200);
     background-repeat: no-repeat;
-    background-position: -300px -220px;
+    background-position: rem(-300) rem(-220);
     
     // background-image: url(images/bg-pattern-intro.svg);
     min-height: rem(550);
