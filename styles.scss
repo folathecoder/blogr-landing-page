@@ -47,7 +47,7 @@ $color-footer-bg: hsl(240, 10%, 16%);
 $color-body-text: hsl(207, 13%, 34%);
 
 // ========== GRADIENTS
-$gradient-sections: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+$gradient-sections: linear-gradient(hsl(13, 100%, 77%), hsl(353, 100%, 54%));
 $gradient-body: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
 
 // ========== FONT WEIGHTS
@@ -165,8 +165,10 @@ p a {
 
 // ========== HEADER AND HERO WRAP TO ENABLE BACKGROUND
 .cta__wrap {
-    background-image: $gradient-sections;
-    background-image: url(images/bg-pattern-intro.svg);
+    background-image: url(images/bg-pattern-intro.svg), $gradient-sections;
+    background-size: 1200px 1200px;
+    background-repeat: no-repeat;
+    background-position: -300px -220px;
     
     // background-image: url(images/bg-pattern-intro.svg);
     min-height: rem(550);

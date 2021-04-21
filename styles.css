@@ -100,9 +100,11 @@ p a {
 }
 
 .cta__wrap {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
-  background-image: linear-gradient(#ff8f70, #ff3d54);
-  background-image: url(images/bg-pattern-intro.svg);
+  background-image: url(images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, left bottom, from(#ffa38a), to(#ff1430));
+  background-image: url(images/bg-pattern-intro.svg), linear-gradient(#ffa38a, #ff1430);
+  background-size: 1200px 1200px;
+  background-repeat: no-repeat;
+  background-position: -300px -220px;
   min-height: 34.375rem;
   max-width: 100%;
   border-radius: 0rem 0rem 0rem 6.25rem;
