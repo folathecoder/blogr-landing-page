@@ -74,6 +74,7 @@ a {
 h1 {
   font-size: 1.875rem;
   line-height: 2.5rem;
+  font-weight: 600;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -85,9 +86,10 @@ p a {
   display: block;
   background-color: white;
   color: #ff525d;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0.3125rem;
   border-radius: 1.5625rem;
   margin: 0.125rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   border: 0.0625rem solid white;
 }
@@ -100,6 +102,7 @@ p a {
 .cta__wrap {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
   background-image: linear-gradient(#ff8f70, #ff3d54);
+  background-image: url(images/bg-pattern-intro.svg);
   min-height: 34.375rem;
   max-width: 100%;
   border-radius: 0rem 0rem 0rem 6.25rem;
@@ -115,7 +118,7 @@ header {
 .header__container {
   max-width: 65.625rem;
   margin: 0rem auto;
-  padding-top: 2.5rem;
+  padding-top: 3.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,6 +131,11 @@ header {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.logo img {
+  width: 4.375rem;
+  height: auto;
 }
 
 .mobile__menu {
@@ -146,13 +154,19 @@ header {
   max-width: 100%;
   min-height: 25rem;
   background-color: transparent;
-  padding: 0rem 2.1875rem;
+  padding: 0rem 0.9375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 360px) {
+  .hero {
+    padding: 0rem 2.1875rem;
+  }
 }
 
 .hero__container {
@@ -162,7 +176,7 @@ header {
 }
 
 .hero__container h1 {
-  margin-bottom: 0.9375rem;
+  margin: 3.4375rem 0rem 0.9375rem 0rem;
   color: white;
 }
 
@@ -171,12 +185,20 @@ header {
 }
 
 .hero__buttons {
-  margin-top: 3.125rem;
+  margin-top: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hero__buttons > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 6.6875rem;
+          flex: 1 6.6875rem;
+  margin: 0.3125rem;
 }
 /*# sourceMappingURL=styles.css.map */
