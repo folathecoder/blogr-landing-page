@@ -144,6 +144,13 @@ p, a {
   }
 }
 
+@media screen and (min-width: 1500px) {
+  .cta__wrap {
+    background-size: 375rem 375rem;
+    background-position: -50rem -156.25rem;
+  }
+}
+
 header {
   max-width: 100%;
   min-height: 0rem;

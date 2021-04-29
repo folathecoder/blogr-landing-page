@@ -6,6 +6,11 @@
 
 // ========== MEDIA QUERIES (MIXINS)
 @mixin media-query ($size) {
+    @if $size == large-desktop {
+        @media screen and (min-width: 1500px) {
+            @content;
+        }
+    }
     @if $size == desktop {
         @media screen and (min-width: 1200px) {
             @content;
@@ -199,10 +204,13 @@ p, a {
         background-size: rem(2000) rem(2000);
         background-position: rem(-400) rem(-620);
     }
-
     @include media-query(desktop) {
         background-size: rem(3000) rem(3000);
         background-position: rem(-400) rem(-1250);
+    }
+    @include media-query(large-desktop) {
+        background-size: rem(6000) rem(6000);
+        background-position: rem(-800) rem(-2500);
     }
 
 }
