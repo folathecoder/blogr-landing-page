@@ -325,6 +325,8 @@ header {
         img {
             margin: rem(0);
             text-align: center;
+            max-width: rem(500);
+            max-height: auto;
         }
     }
 
@@ -351,7 +353,7 @@ header {
     max-width: 100%;
     min-height: rem(500);
     padding: rem(0) rem(25);
-    margin: rem(250) rem(0);
+    margin: rem(250) rem(0) rem(-30) rem(0);
     background-color: $color-headings;
     background-image:url(images/bg-pattern-circles.svg);
     background-size: 160%;
