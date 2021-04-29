@@ -295,10 +295,10 @@ header {
 
 
 
-// ========== SECOND SECTION 
+// ========== FEATURE SECTION 
 
 
-.second {
+.feature {
     max-width: 100%;
     min-height: rem(0);
     padding: rem(0) rem(25);
@@ -316,7 +316,7 @@ header {
     }
 }
 
-.second__content {
+.feature__content {
 
     &-image {
         display: flex;
@@ -338,7 +338,7 @@ header {
     }
 }
 
-.second__content-text {
+.feature__content-text {
     h3 {
         margin: rem(0) rem(40) rem(20) rem(40);
 
