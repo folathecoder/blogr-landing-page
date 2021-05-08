@@ -144,8 +144,21 @@ a {
 h1 {
     font-size: rem(30);
     line-height: rem(40);
-    font-weight: $weight-semi-bold;
-    font-family: $font-secondary;
+    font-weight: $weight-bold;
+    font-family: $font-primary;
+
+    @include media-query(large-mobile) {
+        font-size: rem(35);
+        line-height: rem(40);
+    }
+    @include media-query(tablet) {
+        font-size: rem(45);
+        line-height: rem(40);
+    }
+    @include media-query(desktop) {
+        font-size: rem(55);
+        line-height: rem(40);
+    }
 }
 
 h2 {
@@ -187,6 +200,11 @@ p, a {
 .btn2 {
     background-color: transparent;
     color: $color-neutral;
+}
+
+// ========== Turn elements on and off
+.hidden {
+    display: none;
 }
 
 // ========== HEADER AND HERO WRAP TO ENABLE BACKGROUND
@@ -241,6 +259,13 @@ header {
     img {
         width: rem(70);
         height: auto;
+
+        @include media-query(tablet-mini) {
+            width: rem(85);
+        }
+        @include media-query(desktop) {
+            width: rem(100);
+        }
     }
 }
 .mobile__menu {
@@ -248,7 +273,27 @@ header {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    position: relative;
+
+    &-icon {
+        cursor: pointer;
+    }
 }
+// -----------------------
+
+// .menu {
+//     position: absolute;
+//     // margin: rem(50) rem(20) rem(0) rem(20);
+//     background-color: $color-neutral;
+//     width: 100vw;
+//     : 0;
+
+
+// }
+
+
+
+
 
 // ========== HERO SECTION
 .hero {
