@@ -108,6 +108,20 @@ h2 {
   color: #1f3f5b;
 }
 
+@media screen and (min-width: 602px) {
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 2.1875rem;
+    line-height: 2.5rem;
+  }
+}
+
 h3 {
   font-size: 1.375rem;
   line-height: 1.8125rem;
@@ -118,27 +132,56 @@ h3 {
 
 p, a {
   font-size: 1rem;
-  line-height: 1.75rem;
+  line-height: 1.5625rem;
   color: #4e5156;
   font-weight: 300;
   font-family: "Overpass", sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  p, a {
+    line-height: 2.1875rem;
+  }
 }
 
 .btn {
   display: block;
   background-color: white;
   color: #ff525d;
-  padding: 0.75rem 0.3125rem;
+  max-width: 12.5rem;
+  padding: 0.625rem 0rem;
   border-radius: 1.5625rem;
   margin: 0.125rem;
   font-size: 0.9375rem;
   font-weight: 700;
+  font-family: "Ubuntu", sans-serif;
   border: 0.0625rem solid white;
+}
+
+@media screen and (min-width: 1200px) {
+  .btn {
+    padding: 0.4375rem 0rem;
+  }
+}
+
+.btn:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #ff7a85;
+  color: white;
+  border-color: #ff7a85;
+  -webkit-box-shadow: 0rem 0rem 3.125rem #ff7a85;
+          box-shadow: 0rem 0rem 3.125rem #ff7a85;
 }
 
 .btn2 {
   background-color: transparent;
   color: white;
+}
+
+.btn2:hover {
+  background-color: white;
+  color: #ff7a85;
 }
 
 .hidden {
@@ -267,11 +310,39 @@ header {
 }
 
 .hero__container p {
+  font-size: 1rem;
+  line-height: 1.5625rem;
   color: white;
+  font-weight: 300;
+  font-family: "Overpass", sans-serif;
+}
+
+@media screen and (min-width: 602px) {
+  .hero__container p {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero__container p {
+    font-size: 1.1875rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__container p {
+    font-size: 1.25rem;
+    line-height: 2.1875rem;
+    margin-top: 1.25rem;
+  }
 }
 
 .hero__buttons {
+  max-width: 22.5rem;
   margin-top: 2.5rem;
+  margin: 2.5rem auto 0rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -279,6 +350,12 @@ header {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__buttons {
+    max-width: 20rem;
+  }
 }
 
 .hero__buttons > * {
@@ -289,11 +366,42 @@ header {
 }
 
 .feature {
-  max-width: 100%;
+  max-width: 125rem;
   min-height: 0rem;
   padding: 0rem 1.5625rem;
   z-index: 1000;
   margin: 6.25rem 0rem;
+}
+
+@media screen and (min-width: 992px) {
+  .feature {
+    background-image: url(images/illustration-editor-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 46.875rem;
+    background-position: 34.375rem 0rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature {
+    margin: 0rem auto;
+    padding: 9.375rem 1.5625rem;
+    background-size: 56.25rem;
+    background-position: 46.875rem 6.25rem;
+    z-index: 1000;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .feature {
+    background-position: 56.25rem 6.25rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .feature {
+    background-position: 75rem 6.25rem;
+  }
 }
 
 .feature__container {
@@ -306,7 +414,32 @@ header {
   margin-bottom: 2.5rem;
 }
 
+.feature__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 992px) {
+  .feature__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .feature__content-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,10 +454,21 @@ header {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  height: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+@media screen and (min-width: 992px) {
+  .feature__content-image img {
+    display: none;
+  }
 }
 
 .feature__content-texts {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin: 3.125rem 0rem;
 }
 
@@ -333,8 +477,20 @@ header {
   margin: 3.125rem 0rem;
 }
 
+@media screen and (min-width: 992px) {
+  .feature__content-texts > * {
+    text-align: left;
+  }
+}
+
 .feature__content-text h3 {
   margin: 0rem 2.5rem 1.25rem 2.5rem;
+}
+
+@media screen and (min-width: 786px) {
+  .feature__content-text h3 {
+    margin: 0rem 0rem 1.25rem 0rem;
+  }
 }
 
 .feature2__image img {

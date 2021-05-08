@@ -6,6 +6,11 @@
 
 // ========== MEDIA QUERIES (MIXINS)
 @mixin media-query ($size) {
+    @if $size == mega-desktop {
+        @media screen and (min-width: 1800px) {
+            @content;
+        }
+    }
     @if $size == large-desktop {
         @media screen and (min-width: 1500px) {
             @content;
@@ -167,6 +172,19 @@ h2 {
     font-weight: $weight-medium;
     font-family: $font-secondary;
     color: $color-headings;
+
+    @include media-query(large-mobile) {
+        font-size: rem(30);
+        line-height: rem(40);
+    }
+    // @include media-query(tablet) {
+    //     font-size: rem(19);
+    //     line-height: rem(32);
+    // }
+    @include media-query(desktop) {
+        font-size: rem(35);
+        line-height: rem(40);
+    }
 }
 
 h3 {
@@ -179,10 +197,22 @@ h3 {
 
 p, a {
     font-size: rem(16);
-    line-height: rem(28);
+    line-height: rem(25);
     color: $color-body-text;
     font-weight: $weight-light;
     font-family: $font-primary;
+
+    // @include media-query(large-mobile) {
+    //     font-size: rem(18);
+    //     line-height: rem(30);
+    // }
+    // @include media-query(tablet) {
+    //     font-size: rem(19);
+    //     line-height: rem(32);
+    // }
+    @include media-query(desktop) {
+        line-height: rem(35);
+    }
 }
 
 // ========== GENERAL BUTTON STRUCTURE
@@ -190,16 +220,36 @@ p, a {
     display: block;
     background-color: $color-neutral;
     color: $color-cta-text;
-    padding: rem(12) rem(5);
+    max-width: rem(200);
+    padding: rem(10) rem(0);
     border-radius: rem(25);
     margin: rem(2);
     font-size: rem(15);
     font-weight: $weight-bold;
+    font-family: $font-secondary;
     border: rem(1) solid $color-neutral;
+
+    @include media-query(desktop) {
+        padding: rem(7) rem(0);
+    }
+
+    &:hover {
+        transition: 0.5s;
+        background-color: $color-cta-bg;
+        color: $color-neutral;
+        border-color: $color-cta-bg;
+        box-shadow: rem(0) rem(0) rem(50) $color-cta-bg;
+    }
+    
 }
 .btn2 {
     background-color: transparent;
     color: $color-neutral;
+    
+    &:hover {
+        background-color: $color-neutral;
+        color: $color-cta-bg;
+    }
 }
 
 // ========== Turn elements on and off
@@ -321,16 +371,40 @@ header {
         }
 
         p {
+            font-size: rem(16);
+            line-height: rem(25);
             color: $color-neutral;
+            font-weight: $weight-light;
+            font-family: $font-primary;
+        
+            @include media-query(large-mobile) {
+                font-size: rem(18);
+                line-height: rem(30);
+            }
+            @include media-query(tablet) {
+                font-size: rem(19);
+                line-height: rem(32);
+            }
+            @include media-query(desktop) {
+                font-size: rem(20);
+                line-height: rem(35);
+                margin-top: rem(20);
+            }
         }
+            
     }
 
     &__buttons {
+        max-width: rem(360);
         margin-top: rem(40);
-        // background-color: green;
+        margin: rem(40) auto rem(0) auto;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+
+        @include media-query(desktop) {
+            max-width: rem(320);
+        }
 
         & > * {
             flex: 1  rem(107);
@@ -339,17 +413,35 @@ header {
     }
 }
 
-
-
 // ========== FEATURE SECTION 
 
-
 .feature {
-    max-width: 100%;
+    max-width: rem(2000);
     min-height: rem(0);
     padding: rem(0) rem(25);
     z-index: 1000;
     margin: rem(100) rem(0);
+    @include media-query(tablet) {
+        background-image: url(images/illustration-editor-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: rem(750);
+        background-position: rem(550) rem(0);
+        // position: fixed;
+    }
+    @include media-query(desktop) {
+        margin: rem(0) auto;
+        padding: rem(150) rem(25);
+        // margin: rem(0) rem(0);
+        background-size: rem(900);
+        background-position: rem(750) rem(100);
+        z-index: 1000;
+    }
+    @include media-query(large-desktop) {
+        background-position: rem(900) rem(100);
+    }
+    @include media-query(mega-desktop) {
+        background-position: rem(1200) rem(100);
+    }
 
     &__container {
          max-width: rem(1050);
@@ -363,33 +455,55 @@ header {
 }
 
 .feature__content {
+    display: flex;
+    flex-direction: column;
+
+    @include media-query(tablet) {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
 
     &-image {
+        flex: 1;
         display: flex;
         justify-content: center;
+        // background-color: red;
+
 
         img {
             margin: rem(0);
             text-align: center;
             max-width: fit-content;
-            height: auto;
+            // width: 100%;
+            height: fit-content;
+
+            @include media-query(tablet) {
+                display: none;
+            }
         }
     }
 
     &-texts {
+        flex: 1;
         margin: rem(50) rem(0);
+        // background-color: blue;
     }
 
     &-texts > * {
         text-align: center;
         margin: rem(50) rem(0);
+        @include media-query(tablet) {
+            text-align: left;
+        }
     }
 }
 
 .feature__content-text {
     h3 {
         margin: rem(0) rem(40) rem(20) rem(40);
-
+        @include media-query(tablet-mini) {
+            margin: rem(0) rem(0) rem(20) rem(0);
+        }
     }
 }
 
