@@ -514,6 +514,27 @@ header {
         max-height: auto;
     }
 }
+
+.feature2__background {
+    @include media-query(tablet) {
+        background-image: url(images/illustration-laptop-desktop.svg);
+        // background-repeat: no-repeat;
+        background-size: rem(750);
+        background-position: rem(-250) rem(0);
+    }
+    @include media-query(desktop) {
+        background-size: rem(900);
+        background-position: rem(-260) rem(100);
+    }
+}
+.feature2__content {
+    @include media-query(tablet) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+
 // ========== EXPLAINER SECTION
 
 .explainer {
@@ -592,10 +613,16 @@ footer {
     display: flex;
     flex-direction: column;
     // background-color: #fff;
+    @include media-query(tablet) {
+        flex-direction: row;
+    }
 
     & > * {
         flex: 1;
         text-align: center;
+        @include media-query(tablet) {
+            text-align: left;
+        }
     }
 }
 
