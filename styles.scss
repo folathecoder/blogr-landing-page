@@ -605,6 +605,10 @@ footer {
     margin-top: rem(100);
     background-color: $color-footer-bg;
     border-radius: rem(0) rem(100) rem(0) rem(0);
+    @include media-query(tablet-mini) {
+        padding-top: rem(50);
+        margin-top: rem(0);
+    }
 }
 
 .footer__container {
@@ -613,14 +617,14 @@ footer {
     display: flex;
     flex-direction: column;
     // background-color: #fff;
-    @include media-query(tablet) {
+    @include media-query(tablet-mini) {
         flex-direction: row;
     }
 
     & > * {
         flex: 1;
         text-align: center;
-        @include media-query(tablet) {
+        @include media-query(tablet-mini) {
             text-align: left;
         }
     }
@@ -630,12 +634,23 @@ footer {
     display: flex;
     justify-content: center;
     margin: rem(70) rem(0);
-    img {
-        text-align: center;
+    @include media-query(tablet-mini) {
+        margin: rem(0) rem(0);
+        justify-content: flex-start;
     }
+    // img {
+    //     text-align: center;
+
+    //     @include media-query(tablet) {
+    //         text-align: left;
+    //     }
+    // }
 }
 
 .footer__menu {
+    & > * {
+        flex: 1;
+    }
 
     &-heading {
         h2 {
@@ -646,6 +661,11 @@ footer {
 
     a {
         color: darken($color: $color-neutral, $amount: 30%);
+
+        &:hover {
+            transition: 0.5s;
+            text-decoration: underline;
+        }
     }
     
     ul {
@@ -654,7 +674,12 @@ footer {
 }
 
 
-
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
 
 
 
