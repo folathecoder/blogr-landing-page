@@ -36,19 +36,31 @@
         <div class="logo">
           <img src="images/logo.svg" alt="blogr">
         </div>
-        <nav class="mobile__menu">
+        <nav class="menu">
           <div class="mobile__menu-icon">
             <img src="images/icon-hamburger.svg" alt="">
             <!-- <img src="images/icon-close.svg" alt=""> -->
           </div>
-<!-- 
-          <ul class="menu">
-            <li><a href="#" class="menu__item1">Product</a></li>
-            <li><a href="#" class="menu__item1">Company</a></li>
-            <li><a href="#" class="menu__item1">Connect</a></li>
-            <li><a href="#" class="menu__item2">Login</a></li>
-            <li><a href="#" class="menu__item2">Sign Up</a></li>
-          </ul> -->
+
+          <ul class="mobile__menu desktop__menu ">
+            <ul class
+            = "menu__item-left">
+              <li><a href="#" class="menu__item">Product <span class="close-dropdown"><img src="images/icon-arrow-light.svg" alt=""></span></a></li>
+              <li><a href="#" class="menu__item">Company <span class="close-dropdown"><img src="images/icon-arrow-light.svg" alt=""></span></a></li>
+              <li><a href="#" class="menu__item">Connect <span class="close-dropdown"><img src="images/icon-arrow-light.svg" alt=""></span></a></li>
+                  <ul>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Newsletter</a></li>
+                    <li><a href="">LinkedIn</a></li>
+                  </ul>
+            </ul>
+
+            <ul class
+            = "menu__item-right">
+              <li class="menu__item-right-wide"><a href="#" class="menu__login">Login</a></li>
+              <li><a href="#" class="header__button">Sign Up</a></li>
+            </ul>
+          </ul>
 
         </nav>
       </div>

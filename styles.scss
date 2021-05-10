@@ -196,6 +196,7 @@ p, a {
     font-weight: $weight-bold;
     font-family: $font-secondary;
     border: rem(1) solid $color-neutral;
+    box-shadow: rem(0) rem(0) rem(50) $color-cta-bg;
 
     @include media-query(desktop) {
         padding: rem(7) rem(0);
@@ -206,7 +207,6 @@ p, a {
         background-color: $color-cta-bg;
         color: $color-neutral;
         border-color: $color-cta-bg;
-        box-shadow: rem(0) rem(0) rem(50) $color-cta-bg;
     }
     
 }
@@ -231,8 +231,6 @@ p, a {
     background-size: rem(1200) rem(1200);
     background-repeat: no-repeat;
     background-position: rem(-300) rem(-220);
-    
-    // background-image: url(images/bg-pattern-intro.svg);
     min-height: rem(550);
     max-width: 100%;
     border-radius: rem(0) rem(0) rem(0) rem(100);
@@ -249,7 +247,6 @@ p, a {
         background-size: rem(6000) rem(6000);
         background-position: rem(-800) rem(-2500);
     }
-
 }
 
 // ========== HEADER SECTION
@@ -283,14 +280,92 @@ header {
         }
     }
 }
-.mobile__menu {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
+.menu {
+    flex: 7;
+    // background-color: #fff;
+}
+.mobile__menu-icon {
+    @include media-query(desktop) {
+        display: none;
+    }
+}
+.desktop__menu {
+    @include media-query(mobile-mini) {
+        display:none;
+    }
+    @include media-query(desktop) {
+        display: flex;
 
-    &-icon {
-        cursor: pointer;
+        
+    }
+
+    & > * {
+        display: flex;
+    } 
+}
+.menu__item-left {
+    // background-color: yellow;
+    text-align: left;
+    flex: 1.5;
+    justify-self: flex-start;
+    & > * {
+        flex: 1;
+    }
+}
+.menu__item-right {
+    // background-color: blue;
+    text-align: right;
+    flex: 2;
+    & > * {
+        flex: 1;
+    }
+    &-wide {
+        flex: 1.6;
+    }
+
+}
+.menu__item {
+    color: darken($color: $color-neutral, $amount: 10%);
+    font-weight: $weight-semi-bold;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        transition: 0.5s;
+        text-decoration: underline;
+        color: $color-neutral;
+    }
+    // span {
+    //     margin-right: rem(20);
+    // }
+}
+
+.menu__item span {
+    margin-left: rem(2);
+}
+.menu__login {
+    color: darken($color: $color-neutral, $amount: 10%);
+    font-weight: $weight-semi-bold;
+
+    &:hover {
+        transition: 0.5s;
+        text-decoration: underline;
+        color: $color-neutral;
+    }
+}
+
+.header__button {
+    background-color: $color-neutral;
+    color: $color-cta-bg;
+    font-weight: $weight-semi-bold;
+    padding: rem(15) rem(35);
+    border-radius: rem(25);
+    box-shadow: rem(0) rem(0) rem(50) $color-cta-bg;
+
+    &:hover {
+        transition: 0.5s;
+        background-color: $color-cta-bg;
+        color: $color-neutral;
     }
 }
 

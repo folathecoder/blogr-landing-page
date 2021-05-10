@@ -139,6 +139,8 @@ p, a {
   font-weight: 700;
   font-family: "Ubuntu", sans-serif;
   border: 0.0625rem solid white;
+  -webkit-box-shadow: 0rem 0rem 3.125rem #ff7a85;
+          box-shadow: 0rem 0rem 3.125rem #ff7a85;
 }
 
 @media screen and (min-width: 1200px) {
@@ -153,8 +155,6 @@ p, a {
   background-color: #ff7a85;
   color: white;
   border-color: #ff7a85;
-  -webkit-box-shadow: 0rem 0rem 3.125rem #ff7a85;
-          box-shadow: 0rem 0rem 3.125rem #ff7a85;
 }
 
 .btn2 {
@@ -245,21 +245,120 @@ header {
   }
 }
 
-.mobile__menu {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.menu {
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+}
+
+@media screen and (min-width: 1200px) {
+  .mobile__menu-icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .desktop__menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .desktop__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.desktop__menu > * {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  position: relative;
 }
 
-.mobile__menu-icon {
-  cursor: pointer;
+.menu__item-left {
+  text-align: left;
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+  justify-self: flex-start;
+}
+
+.menu__item-left > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.menu__item-right {
+  text-align: right;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.menu__item-right > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.menu__item-right-wide {
+  -webkit-box-flex: 1.6;
+      -ms-flex: 1.6;
+          flex: 1.6;
+}
+
+.menu__item {
+  color: #e6e6e6;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__item:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: underline;
+  color: white;
+}
+
+.menu__item span {
+  margin-left: 0.125rem;
+}
+
+.menu__login {
+  color: #e6e6e6;
+  font-weight: 600;
+}
+
+.menu__login:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: underline;
+  color: white;
+}
+
+.header__button {
+  background-color: white;
+  color: #ff7a85;
+  font-weight: 600;
+  padding: 0.9375rem 2.1875rem;
+  border-radius: 1.5625rem;
+  -webkit-box-shadow: 0rem 0rem 3.125rem #ff7a85;
+          box-shadow: 0rem 0rem 3.125rem #ff7a85;
+}
+
+.header__button:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #ff7a85;
+  color: white;
 }
 
 .hero {
