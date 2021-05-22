@@ -250,13 +250,12 @@ header {
 }
 
 .menu {
-  position: relative;
   -webkit-box-flex: 7;
       -ms-flex: 7;
           flex: 7;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   .mobile__menu-icon {
     display: none;
   }
@@ -268,7 +267,7 @@ header {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   .desktop__menu {
     display: -webkit-box;
     display: -ms-flexbox;

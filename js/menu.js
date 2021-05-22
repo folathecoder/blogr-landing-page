@@ -11,12 +11,17 @@ const hiddenToggle = function() {
 }
 
 //* Add (click) event listener to "connectMenu" and insert hidden class
-connectMenu.addEventListener('click', ()=> {
+connectMenu.addEventListener('click', () => {
     hiddenToggle();
 })
 
-//* Add (hover) event listener to "connectMenu" and insert hidden class
-connectMenu.addEventListener('mouseover', ()=> {
+//* Add (mouseover) event listener to "connectMenu" and insert hidden class
+connectMenu.addEventListener('mouseover', () => {
+    hiddenToggle();
+})
+
+// //* Add (mouseout) event listener to "connectSubMenu" and insert hidden class
+connectSubMenu.addEventListener('mouseout', () => {
     hiddenToggle();
 })
 

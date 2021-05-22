@@ -284,20 +284,18 @@ header {
     }
 }
 .menu {
-    position: relative;
     flex: 7;
-    // background-color: #fff;
 }
 .mobile__menu-icon {
-    @include media-query(desktop) {
+    @include media-query(tablet) {
         display: none;
     }
 }
 .desktop__menu {
-    @include media-query(mobile-mini) {
+    @include media-query(mobile) {
         display:none;
     }
-    @include media-query(desktop) {
+    @include media-query(tablet) {
         display: flex;
 
         
@@ -308,7 +306,7 @@ header {
     } 
 }
 .menu__item-left {
-    // background-color: yellow;
+
     text-align: left;
     flex: 1.5;
     justify-self: flex-start;
@@ -329,6 +327,7 @@ header {
 
 }
 .menu__item {
+    
     color: darken($color: $color-neutral, $amount: 10%);
     font-weight: $weight-semi-bold;
     display: flex;
