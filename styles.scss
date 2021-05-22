@@ -224,6 +224,9 @@ p, a {
 .hidden {
     display: none;
 }
+.active {
+    display: block;
+}
 
 // ========== HEADER AND HERO WRAP TO ENABLE BACKGROUND
 .cta__wrap {
@@ -281,6 +284,7 @@ header {
     }
 }
 .menu {
+    position: relative;
     flex: 7;
     // background-color: #fff;
 }
@@ -329,6 +333,7 @@ header {
     font-weight: $weight-semi-bold;
     display: flex;
     align-items: center;
+    position: relative;
 
     &:hover {
         transition: 0.5s;
@@ -368,6 +373,54 @@ header {
         color: $color-neutral;
     }
 }
+// ============== Menu Functionalities
+// .icon__rotate {
+//     position: absolute;
+//     transform: rotateY(270deg);
+// }
+
+.sub-menu {
+    position: absolute;
+    background-color: $color-neutral;
+    width: rem(180);
+    padding: rem(15);
+    border-radius: rem(10);
+    box-shadow: rem(0) rem(0) rem(2) $color-cta-bg;
+    margin-top: rem(50);
+    margin-left: rem(170);
+    a {
+        color: $color-body-text;
+        font-size: rem(15);
+    }
+
+    li:hover {
+        transform: translateX(rem(20));
+        transition: 0.5s ease-in-out;
+        
+        a {
+            transition: all 0.5s ease-in-out;
+            font-weight: $weight-bold;
+            transform: translateX(rem(30));
+        }
+    }
+
+    // a {
+    //     color: $color-body-text;
+    //     font-size: rem(15);
+
+    //     &:hover {
+    //         transition: all 0.5s ease-in-out;
+    //         font-weight: $weight-bold;
+    //         transform: translateX(rem(30));
+    //     }
+
+    //     &:active {
+    //         transition: all 0.5s ease-in-out;
+    //         font-weight: $weight-bold;
+    //     }
+    // }
+}
+
 
 // ========== HERO SECTION
 .hero {

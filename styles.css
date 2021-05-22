@@ -171,6 +171,10 @@ p, a {
   display: none;
 }
 
+.active {
+  display: block;
+}
+
 .cta__wrap {
   background-image: url(images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, left bottom, from(#ffa38a), to(#ff1430));
   background-image: url(images/bg-pattern-intro.svg), linear-gradient(#ffa38a, #ff1430);
@@ -246,6 +250,7 @@ header {
 }
 
 .menu {
+  position: relative;
   -webkit-box-flex: 7;
       -ms-flex: 7;
           flex: 7;
@@ -319,6 +324,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .menu__item:hover {
@@ -359,6 +365,38 @@ header {
   transition: 0.5s;
   background-color: #ff7a85;
   color: white;
+}
+
+.sub-menu {
+  position: absolute;
+  background-color: white;
+  width: 11.25rem;
+  padding: 0.9375rem;
+  border-radius: 0.625rem;
+  -webkit-box-shadow: 0rem 0rem 0.125rem #ff7a85;
+          box-shadow: 0rem 0rem 0.125rem #ff7a85;
+  margin-top: 3.125rem;
+  margin-left: 10.625rem;
+}
+
+.sub-menu a {
+  color: #4e5156;
+  font-size: 0.9375rem;
+}
+
+.sub-menu li:hover {
+  -webkit-transform: translateX(1.25rem);
+          transform: translateX(1.25rem);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.sub-menu li:hover a {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  font-weight: 700;
+  -webkit-transform: translateX(1.875rem);
+          transform: translateX(1.875rem);
 }
 
 .hero {

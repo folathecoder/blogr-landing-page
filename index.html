@@ -33,26 +33,33 @@
     <!-- ========== 🏁 HEADER SECTION  ========== -->
     <header>
       <div class="header__container">
+
         <div class="logo">
           <img src="images/logo.svg" alt="blogr">
         </div>
+
         <nav class="menu">
+
+          <!--Mobile Menu-->
           <div class="mobile__menu-icon">
             <img src="images/icon-hamburger.svg" alt="">
-            <!-- <img src="images/icon-close.svg" alt=""> -->
           </div>
 
-          <ul class="mobile__menu desktop__menu ">
+          <!--Main Menu-->
+          <div class="mobile__menu desktop__menu">
             <ul class
             = "menu__item-left">
-              <li><a href="#" class="menu__item">Product <span class="close-dropdown"><img src="images/icon-arrow-light.svg" alt=""></span></a></li>
+              <li><a href="#" class="menu__item">Product <span class="close-dropdown icon__rotate"><img src="images/icon-arrow-light.svg" alt=""></span></a></li>
               <li><a href="#" class="menu__item">Company <span class="close-dropdown"><img src="images/icon-arrow-light.svg" alt=""></span></a></li>
-              <li><a href="#" class="menu__item">Connect <span class="close-dropdown"><img src="images/icon-arrow-light.svg" alt=""></span></a></li>
-                  <!-- <ul>
+
+              <li><a href="#" class="menu__item connect">Connect <span class="close-dropdown"><img src="images/icon-arrow-light.svg" alt=""></span></a></li>
+                <div id="connect" class=" sub-menu hidden">
+                  <ul>
                     <li><a href="">Contact</a></li>
                     <li><a href="">Newsletter</a></li>
                     <li><a href="">LinkedIn</a></li>
-                  </ul> -->
+                  </ul>
+                </div>
             </ul>
 
             <ul class
@@ -60,7 +67,7 @@
               <li class="menu__item-right-wide"><a href="#" class="menu__login">Login</a></li>
               <li><a href="#" class="header__button">Sign Up</a></li>
             </ul>
-          </ul>
+          </div>
 
         </nav>
       </div>
@@ -305,6 +312,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+
+  <script src="js/menu.js"></script>
 </body>
 
 </html>
