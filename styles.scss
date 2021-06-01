@@ -129,6 +129,11 @@ body {
 a {
     text-decoration: none;
 }
+
+// a:focus {
+//     line
+// }
+
 h1 {
     font-size: rem(33);
     line-height: rem(40);
@@ -377,7 +382,6 @@ header {
 //     position: absolute;
 //     transform: rotateY(270deg);
 // }
-
 .sub-menu {
     position: absolute;
     background-color: $color-neutral;
@@ -385,21 +389,24 @@ header {
     padding: rem(15);
     border-radius: rem(10);
     box-shadow: rem(0) rem(0) rem(2) $color-cta-bg;
-    margin-top: rem(50);
-    margin-left: rem(170);
+    // margin-top: rem(50);
+    // margin-left: rem(170);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    transform: translateX(rem(100));
     a {
         color: $color-body-text;
         font-size: rem(15);
     }
 
     li:hover {
-        transform: translateX(rem(20));
-        transition: 0.5s ease-in-out;
+        transform: translateX(rem(10));
+        transition: all 0.5s linear;
         
         a {
-            transition: all 0.5s ease-in-out;
+            transition: 0.5s;
             font-weight: $weight-bold;
-            transform: translateX(rem(30));
         }
     }
 
@@ -418,6 +425,35 @@ header {
     //         font-weight: $weight-bold;
     //     }
     // }
+}
+
+// .nav__menu:hover > .close-dropdown.img {
+//     animation: spin 0.5s;
+
+//     @keyframes spin {
+//         from {transform: rotate(0deg)}
+//         to {transform: rotate(90deg)}
+//     }
+// }
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(45deg);}
+    100% {transform: rotate(135deg);}
+}
+
+.nav__menu:hover .close-dropdown {
+    background-color: red;
+    animation: spin 0.5s;
+}
+
+
+
+
+.nav__menu:hover > .sub-menu {
+    transform: translateX(rem(0));
+    opacity: 1;
+    pointer-events: auto;
 }
 
 

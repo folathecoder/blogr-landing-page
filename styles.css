@@ -374,8 +374,12 @@ header {
   border-radius: 0.625rem;
   -webkit-box-shadow: 0rem 0rem 0.125rem #ff7a85;
           box-shadow: 0rem 0rem 0.125rem #ff7a85;
-  margin-top: 3.125rem;
-  margin-left: 10.625rem;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateX(6.25rem);
+          transform: translateX(6.25rem);
 }
 
 .sub-menu a {
@@ -384,18 +388,59 @@ header {
 }
 
 .sub-menu li:hover {
-  -webkit-transform: translateX(1.25rem);
-          transform: translateX(1.25rem);
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transform: translateX(0.625rem);
+          transform: translateX(0.625rem);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 .sub-menu li:hover a {
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   font-weight: 700;
-  -webkit-transform: translateX(1.875rem);
-          transform: translateX(1.875rem);
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+}
+
+.nav__menu:hover .close-dropdown {
+  background-color: red;
+  -webkit-animation: spin 0.5s;
+          animation: spin 0.5s;
+}
+
+.nav__menu:hover > .sub-menu {
+  -webkit-transform: translateX(0rem);
+          transform: translateX(0rem);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .hero {
