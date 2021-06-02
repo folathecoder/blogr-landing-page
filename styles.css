@@ -915,4 +915,86 @@ footer {
 .footer__menu ul {
   margin-bottom: 2.5rem;
 }
+
+@media (max-width: 992px) {
+  .logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .menu {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .desktop__menu {
+    display: initial;
+    position: absolute;
+    background-color: #271b1b;
+    margin: 1.5625rem;
+    margin-top: 2.5rem;
+    top: 100;
+    right: 0;
+    left: 0;
+    border-radius: 0.625rem;
+  }
+  .menu__item-left, .menu__item-right {
+    background-color: blue;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .menu__item-left > *, .menu__item-right > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .menu__item {
+    line-height: 2.5rem;
+  }
+  .menu__login {
+    line-height: 2.5rem;
+    margin-bottom: 6.25rem;
+  }
+  .header__button {
+    line-height: 3.75rem;
+  }
+  .sub-menu {
+    position: initial;
+    background-color: red;
+    max-width: 21.875rem;
+    padding: 0.9375rem;
+    border-radius: 0.625rem;
+    -webkit-box-shadow: 0rem 0rem 0.125rem #ff7a85;
+            box-shadow: 0rem 0rem 0.125rem #ff7a85;
+    opacity: 1;
+    pointer-events: initial;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+  .sub-menu li:hover {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+  .sub-menu li:hover a {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    font-weight: 700;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
