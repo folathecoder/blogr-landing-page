@@ -4,33 +4,32 @@
 
 const body = document.body;
 const headerContainer = document.querySelector('.header__container');
-const connectSubMenu = document.querySelector('#connect');
-const connectMenu = document.querySelector('.connect');
+const hamburgerOpen = document.querySelector('.mobile__menu-icon');
+const hamburgerClose = document.querySelector('.mobile__menu-icon--close');
+const desktopMenu = document.querySelector('.desktop__menu');
 
+const hamburgerOpened = function (e) {
+    hamburgerClose.classList.remove('hidden');
+    hamburgerOpen.classList.add('hidden');
+    desktopMenu.classList.add('desktop__menu--active');
+}
 
-// const hiddenToggle = function() {
-//     connectSubMenu.classList.toggle('hidden');
-// }
+const hamburgerClosed = function (e) {
+    hamburgerClose.classList.add('hidden');
+    hamburgerOpen.classList.remove('hidden');
+    desktopMenu.classList.remove('desktop__menu--active');
+}
 
-// //* Add (click) event listener to "connectMenu" and insert hidden class
-// connectMenu.addEventListener('click', () => {
-//     hiddenToggle();
-// })
+hamburgerClose.classList.add('hidden');
 
-// //* Add (mouseover) event listener to "connectMenu" and insert hidden class
-// connectMenu.addEventListener('mouseover', () => {
-//     hiddenToggle();
-// })
+hamburgerOpen.addEventListener('click', e => {
+    hamburgerOpened();
+})
 
-// // //* Add (mouseout) event listener to "connectSubMenu" and insert hidden class
-// connectSubMenu.addEventListener('mouseout', () => {
-//     hiddenToggle();
-// })
+hamburgerClose.addEventListener('click', e => {
+    hamburgerClosed();
+})
 
-// //* Add (hover) event listener to "body" and insert hidden class
-// body.addEventListener('click', () => {
-//     connectSubMenu.classList.add('hidden');
-// })
 
 
 //TODO: Fade sibling menu links and logo when hovered

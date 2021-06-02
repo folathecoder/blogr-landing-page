@@ -38,6 +38,10 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+.hidden {
+  display: none;
+}
+
 img,
 picture {
   max-width: 100%;
@@ -936,21 +940,38 @@ footer {
   .desktop__menu {
     display: initial;
     position: absolute;
-    background-color: #271b1b;
+    background-color: white;
     margin: 1.5625rem;
-    margin-top: 2.5rem;
+    margin-top: 3.75rem;
     top: 100;
     right: 0;
     left: 0;
-    border-radius: 0.625rem;
+    border-radius: 0.3125rem;
+    padding: 1.25rem 0rem;
+    -webkit-transform: translateY(62.5rem);
+            transform: translateY(62.5rem);
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-box-shadow: 0rem 0.25rem 0.3125rem rgba(0, 0, 0, 0.178);
+            box-shadow: 0rem 0.25rem 0.3125rem rgba(0, 0, 0, 0.178);
+    pointer-events: none;
+  }
+  .desktop__menu--active {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+    opacity: 1;
+    pointer-events: auto;
   }
   .menu__item-left, .menu__item-right {
-    background-color: blue;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .menu__item-left > *, .menu__item-right > * {
     -webkit-box-flex: 1;
@@ -960,11 +981,11 @@ footer {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .menu__item {
+  .menu__item, .menu__login {
+    color: #4e5156;
     line-height: 2.5rem;
   }
   .menu__login {
-    line-height: 2.5rem;
     margin-bottom: 6.25rem;
   }
   .header__button {
@@ -973,17 +994,16 @@ footer {
   .sub-menu {
     position: initial;
     background-color: red;
-    max-width: 21.875rem;
     padding: 0.9375rem;
-    border-radius: 0.625rem;
+    border-radius: 0.3125rem;
     -webkit-box-shadow: 0rem 0rem 0.125rem #ff7a85;
             box-shadow: 0rem 0rem 0.125rem #ff7a85;
     opacity: 1;
     pointer-events: initial;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    -webkit-transform: translateX(0rem);
-            transform: translateX(0rem);
+    -webkit-transform: translate(0rem);
+            transform: translate(0rem);
   }
   .sub-menu li:hover {
     -webkit-transform: translateX(0rem);
@@ -995,6 +1015,9 @@ footer {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     font-weight: 700;
+  }
+  .close-dropdown {
+    color: #ff7a85;
   }
 }
 /*# sourceMappingURL=styles.css.map */

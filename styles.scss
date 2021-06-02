@@ -111,6 +111,10 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+.hidden {
+    display: none;
+}
+
 img,
 picture {
   max-width: 100%;
@@ -792,7 +796,6 @@ footer {
 @media (max-width: 992px) {
     // ========== HEADER SECTION
 
-
 .logo {
     flex: 1;
 }
@@ -804,30 +807,41 @@ footer {
 .desktop__menu {
     display: initial;
     position: absolute;
-    background-color: rgb(39, 27, 27);
+    background-color: $color-neutral;
     margin: rem(25);
-    margin-top: rem(40);
+    margin-top: rem(60);
     top: 100;
     right: 0;
     left: 0;
-    border-radius: rem(10);
-
+    border-radius: rem(5);
+    padding: rem(20) rem(0);
+    transform: translateY(rem(1000));
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    box-shadow: rem(0) rem(4) rem(5) hsla(0, 0%, 0%, 0.178);
+    pointer-events: none;
+}
+.desktop__menu--active {
+    transform: translateY(rem(0));
+    opacity: 1;
+    pointer-events: auto;
 }
 .menu__item-left, .menu__item-right {
-    background-color: blue;
+    // background-color: blue;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
 
     & > * {
         flex: 1;
         align-self: center;
     }
 }
-.menu__item {
+.menu__item, .menu__login {
+    color: $color-body-text;
     line-height: rem(40);
 }
 .menu__login {
-    line-height: rem(40);
     margin-bottom: rem(100);
 }
 
@@ -838,15 +852,15 @@ footer {
 .sub-menu {
     position: initial;
     background-color: red;
-    max-width: rem(350);
+    // max-width: 100%;
     padding: rem(15);
-    border-radius: rem(10);
+    border-radius: rem(5);
     box-shadow: rem(0) rem(0) rem(2) $color-cta-bg;
 
     opacity: 1;
     pointer-events: initial;
     transition: 0.5s;
-    transform: translateX(rem(0));
+    transform: translate(rem(0));
 
     li:hover {
         transform: translateX(rem(0));
@@ -858,5 +872,9 @@ footer {
         }
     }
 
+}
+
+.close-dropdown {
+    color: $color-cta-bg;
 }
 }
