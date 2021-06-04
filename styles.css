@@ -338,7 +338,7 @@ header {
 }
 
 .menu__item span {
-  margin-left: 0.125rem;
+  margin-left: 0.3125rem;
 }
 
 .menu__login {
@@ -445,6 +445,10 @@ header {
           transform: translateX(0rem);
   opacity: 1;
   pointer-events: auto;
+}
+
+mobile__menu-icon--close {
+  display: none;
 }
 
 .hero {
@@ -969,9 +973,6 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   .menu__item-left > *, .menu__item-right > * {
     -webkit-box-flex: 1;
@@ -981,23 +982,36 @@ footer {
         -ms-grid-row-align: center;
         align-self: center;
   }
+  .menu__item-right {
+    margin-top: 1.25rem;
+  }
   .menu__item, .menu__login {
     color: #4e5156;
-    line-height: 2.5rem;
+    line-height: 3.125rem;
+    text-align: center;
   }
   .menu__login {
     margin-bottom: 6.25rem;
+  }
+  .menu__item {
+    position: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .header__button {
     line-height: 3.75rem;
   }
   .sub-menu {
     position: initial;
-    background-color: red;
+    background-color: rgba(128, 128, 128, 0.089);
     padding: 0.9375rem;
     border-radius: 0.3125rem;
-    -webkit-box-shadow: 0rem 0rem 0.125rem #ff7a85;
-            box-shadow: 0rem 0rem 0.125rem #ff7a85;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     opacity: 1;
     pointer-events: initial;
     -webkit-transition: 0.5s;
@@ -1016,8 +1030,25 @@ footer {
     transition: 0.5s;
     font-weight: 700;
   }
-  .close-dropdown {
-    color: #ff7a85;
+  .close-dropdown img {
+    background-color: red;
+    background-clip: text;
+    fill: 100%;
+  }
+  .header__button {
+    background-color: #ff7a85;
+    color: white;
+    -webkit-box-shadow: 0rem 0rem 3.125rem white;
+            box-shadow: 0rem 0rem 3.125rem white;
+  }
+  .header__button:hover {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-color: #ff4757;
+    color: white;
+  }
+  .hidden {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */

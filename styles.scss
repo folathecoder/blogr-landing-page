@@ -354,7 +354,7 @@ header {
 }
 
 .menu__item span {
-    margin-left: rem(2);
+    margin-left: rem(5);
 }
 .menu__login {
     color: darken($color: $color-neutral, $amount: 10%);
@@ -460,6 +460,9 @@ header {
     pointer-events: auto;
 }
 
+mobile__menu-icon--close {
+    display: none;
+}
 
 // ========== HERO SECTION
 .hero {
@@ -830,19 +833,29 @@ footer {
     // background-color: blue;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
 
     & > * {
         flex: 1;
         align-self: center;
     }
 }
+
+.menu__item-right {
+    margin-top: rem(20);
+}
 .menu__item, .menu__login {
     color: $color-body-text;
-    line-height: rem(40);
+    line-height: rem(50);
+    text-align: center;
 }
 .menu__login {
     margin-bottom: rem(100);
+}
+.menu__item {
+    // background-color: blue;
+    position: initial;
+    display: flex;
+    justify-content: center;
 }
 
 .header__button {
@@ -851,17 +864,16 @@ footer {
 
 .sub-menu {
     position: initial;
-    background-color: red;
+    background-color: rgba(128, 128, 128, 0.089);
     // max-width: 100%;
     padding: rem(15);
     border-radius: rem(5);
-    box-shadow: rem(0) rem(0) rem(2) $color-cta-bg;
+    box-shadow: none;
 
     opacity: 1;
     pointer-events: initial;
     transition: 0.5s;
     transform: translate(rem(0));
-
     li:hover {
         transform: translateX(rem(0));
         transition: all 0.5s linear;
@@ -875,6 +887,31 @@ footer {
 }
 
 .close-dropdown {
-    color: $color-cta-bg;
+    img {
+        background-color: red;
+        background-clip: text;
+        fill: 100%;
+    }
 }
+
+.header__button {
+    background-color: $color-cta-bg;
+    color: $color-neutral;
+    box-shadow: rem(0) rem(0) rem(50) $color-neutral;
+
+    &:hover {
+        transition: 0.5s;
+        background-color: darken($color-cta-bg, $amount: 10%);
+        color: $color-neutral;
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+
+// .visible {
+//     display: block;
+// }
 }
