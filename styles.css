@@ -78,7 +78,6 @@ a {
 
 a:focus {
   outline: 0.125rem solid yellow;
-  padding: 0rem;
 }
 
 h1 {
