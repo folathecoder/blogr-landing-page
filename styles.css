@@ -190,6 +190,8 @@ section {
   -webkit-transform: translateY(3.125rem);
           transform: translateY(3.125rem);
   opacity: 0;
+  -webkit-transition: 0s;
+  transition: 0s;
 }
 
 .cta__wrap {
