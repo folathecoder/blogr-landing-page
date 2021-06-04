@@ -11,6 +11,16 @@ const navMenu = document.querySelectorAll('.nav__menu');
 const subMenu = document.querySelectorAll('.sub-menu');
 const menuIcon = document.querySelectorAll('.menu-icon');
 const allSections = document.querySelectorAll('section');
+const tablet = window.matchMedia("(max-width: 992px)");
+const menuIconImage = document.querySelectorAll('.menu-icon img');
+
+//TODO: Change src of icon dropdown on screen lesser than 992px
+
+if (tablet.matches) {
+    menuIconImage.forEach(icon => {
+        icon.setAttribute('src', 'images/icon-arrow-dark.svg');
+    })
+}
 
 //TODO: Mobile dropdown menu
 

@@ -1020,6 +1020,9 @@ footer {
     line-height: 3.125rem;
     text-align: center;
   }
+  .menu__item:hover, .menu__login:hover {
+    color: #454e5e;
+  }
   .menu__login {
     margin-bottom: 6.25rem;
   }
@@ -1088,8 +1091,8 @@ footer {
               transform: rotate(0deg);
     }
     100% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
     }
   }
   @keyframes spin {
@@ -1098,8 +1101,8 @@ footer {
               transform: rotate(0deg);
     }
     100% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
     }
   }
 }

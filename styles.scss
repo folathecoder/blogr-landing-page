@@ -802,12 +802,15 @@ footer {
     color: $color-body-text;
     line-height: rem(50);
     text-align: center;
+
+    &:hover {
+        color: saturate($color-body-text, $amount: 10%);
+    }
 }
 .menu__login {
     margin-bottom: rem(100);
 }
 .menu__item {
-    // background-color: blue;
     position: initial;
     display: flex;
     justify-content: center;
@@ -872,7 +875,9 @@ footer {
     }
     @keyframes spin {
         0% {transform: rotate(0deg);}
-        100% {transform: rotate(90deg);} 
+        100% {transform: rotate(180deg);} 
     }
 }
+
+
 }
