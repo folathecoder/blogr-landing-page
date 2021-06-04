@@ -121,6 +121,22 @@ picture {
   display: block;
 }
 
+
+//============== Remove all animations and transitions for people that prefer not to see them 
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 // ========== BASE
 body {
     text-rendering: optimizeSpeed;
@@ -134,9 +150,10 @@ a {
     text-decoration: none;
 }
 
-// a:focus {
-//     line
-// }
+a:focus {
+    outline: rem(2) solid hsl(60, 100%, 50%);
+    padding: rem(0);
+}
 
 h1 {
     font-size: rem(33);
