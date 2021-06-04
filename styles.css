@@ -217,8 +217,7 @@ section {
 }
 
 .cta__wrap {
-  background-image: url(images/bg-pattern-intro.svg), -webkit-gradient(linear, left top, left bottom, from(#ffa38a), to(#ff1430));
-  background-image: url(images/bg-pattern-intro.svg), linear-gradient(#ffa38a, #ff1430);
+  background-image: url(images/bg-pattern-intro.svg), linear-gradient(120deg, #ffa38a, #ff1430);
   background-size: 75rem 75rem;
   background-repeat: no-repeat;
   background-position: -18.75rem -13.75rem;
@@ -726,7 +725,7 @@ header {
   min-height: 25rem;
   padding: 0rem 1.5625rem;
   margin: 12.5rem 0rem -1.875rem 0rem;
-  background-color: #1f3f5b;
+  background-color: #2c2d3f;
   background-image: url(images/bg-pattern-circles.svg);
   background-size: 160%;
   background-attachment: linear-gradient(#2c2d3f, #3f4164);
@@ -752,7 +751,7 @@ header {
     min-height: 25rem;
     background-size: 70%;
     background-position: -7.1875rem -28.125rem;
-    border-radius: 0rem 0rem 0rem 6.25rem;
+    border-radius: 0rem 6.25rem 0rem 6.25rem;
   }
 }
 
@@ -967,7 +966,7 @@ footer {
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: end;
+            justify-content: flex-end;
   }
   .mobile__menu-icon--close {
     display: block;
@@ -1062,11 +1061,7 @@ footer {
     font-weight: 700;
   }
   .menu-icon img {
-    background-color: #ff525d;
-    background-size: 100%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-repeat: no-repeat;
+    -webkit-text-fill-color: #3221ce;
   }
   .header__button {
     background-color: #ff7a85;

@@ -46,7 +46,7 @@
           @content;
       }
   } 
-  }
+}
 
 // ========== COLORS
 $color-cta-text: hsl(356, 100%, 66%);
@@ -121,9 +121,7 @@ picture {
   display: block;
 }
 
-
 //============== Remove all animations and transitions for people that prefer not to see them 
-
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
      scroll-behavior: auto;
@@ -149,12 +147,10 @@ body {
 a {
     text-decoration: none;
 }
-
 a:focus {
     outline: rem(2) solid hsl(60, 100%, 50%);
     padding: rem(0);
 }
-
 h1 {
     font-size: rem(33);
     line-height: rem(40);
@@ -255,23 +251,18 @@ p, a {
 }
 
 // ====== Fade Sections
-
 section {
     transition: transform 1s, opacity 1s;
 }
-
 .disabled {
-  
     transform: translateY(rem(50));
     opacity: 0;
     transition: 0s;
 }
 
-
-
 // ========== HEADER AND HERO WRAP TO ENABLE BACKGROUND
 .cta__wrap {
-    background-image: url(images/bg-pattern-intro.svg), $gradient-sections;
+    background-image: url(images/bg-pattern-intro.svg), linear-gradient( 120deg, hsl(13, 100%, 77%), hsl(353, 100%, 54%));
     background-size: rem(1200) rem(1200);
     background-repeat: no-repeat;
     background-position: rem(-300) rem(-220);
@@ -300,14 +291,12 @@ header {
     padding: rem(0) rem(25);
     z-index: 1000;
 }
-
 .header__container {
     max-width: rem(1050);
     margin: rem(0) auto;
     padding-top: rem(50);
     display: flex;
     align-items: center;
-    
 }
 .logo {
     flex: 1;
@@ -338,16 +327,12 @@ header {
     }
     @include media-query(tablet) {
         display: flex;
-
-        
     }
-
     & > * {
         display: flex;
     } 
 }
 .menu__item-left {
-
     text-align: left;
     flex: 1.5;
     justify-self: flex-start;
@@ -356,7 +341,6 @@ header {
     }
 }
 .menu__item-right {
-    // background-color: blue;
     text-align: right;
     flex: 2;
     & > * {
@@ -368,37 +352,29 @@ header {
 
 }
 .menu__item {
-    
     color: darken($color: $color-neutral, $amount: 10%);
     font-weight: $weight-semi-bold;
     display: flex;
     align-items: center;
     position: relative;
-
     &:hover {
         transition: 0.5s;
         text-decoration: underline;
         color: $color-neutral;
     }
-    // span {
-    //     margin-right: rem(20);
-    // }
 }
-
 .menu__item span {
     margin-left: rem(5);
 }
 .menu__login {
     color: darken($color: $color-neutral, $amount: 10%);
     font-weight: $weight-semi-bold;
-
     &:hover {
         transition: 0.5s;
         text-decoration: underline;
         color: $color-neutral;
     }
 }
-
 .header__button {
     background-color: $color-neutral;
     color: $color-cta-bg;
@@ -413,11 +389,6 @@ header {
         color: $color-neutral;
     }
 }
-// ============== Menu Functionalities
-// .icon__rotate {
-//     position: absolute;
-//     transform: rotateY(270deg);
-// }
 .sub-menu {
     position: absolute;
     background-color: $color-neutral;
@@ -425,8 +396,6 @@ header {
     padding: rem(15);
     border-radius: rem(10);
     box-shadow: rem(0) rem(0) rem(2) $color-cta-bg;
-    // margin-top: rem(50);
-    // margin-left: rem(170);
     opacity: 0;
     pointer-events: none;
     transition: 0.5s;
@@ -435,56 +404,15 @@ header {
         color: $color-body-text;
         font-size: rem(15);
     }
-
     li:hover {
         transform: translateX(rem(10));
         transition: all 0.5s linear;
-        
         a {
             transition: 0.5s;
             font-weight: $weight-bold;
         }
     }
-
-    // a {
-    //     color: $color-body-text;
-    //     font-size: rem(15);
-
-    //     &:hover {
-    //         transition: all 0.5s ease-in-out;
-    //         font-weight: $weight-bold;
-    //         transform: translateX(rem(30));
-    //     }
-
-    //     &:active {
-    //         transition: all 0.5s ease-in-out;
-    //         font-weight: $weight-bold;
-    //     }
-    // }
 }
-
-// .nav__menu:hover > .close-dropdown.img {
-//     animation: spin 0.5s;
-
-//     @keyframes spin {
-//         from {transform: rotate(0deg)}
-//         to {transform: rotate(90deg)}
-//     }
-// }
-
-// @keyframes spin {
-//     0% {transform: rotate(0deg);}
-//     50% {transform: rotate(45deg);}
-//     100% {transform: rotate(135deg);}
-// }
-
-// .nav__menu:hover .close-dropdown {
-//     background-color: red;
-//     animation: spin 0.5s;
-// }
-
-
-
 
 .nav__menu:hover > .sub-menu {
     transform: translateX(rem(0));
@@ -496,9 +424,7 @@ header {
     display: none;
 }
 
-
-
- .icon__rotate {
+.icon__rotate {
     img {
         animation: spin 0.5s linear both;
     }
@@ -508,9 +434,6 @@ header {
         
     }
 }
-
-
-
 
 // ========== HERO SECTION
 .hero {
@@ -682,7 +605,7 @@ header {
     min-height: rem(400);
     padding: rem(0) rem(25);
     margin: rem(200) rem(0) rem(-30) rem(0);
-    background-color: $color-headings;
+    background-color: hsl(237, 17%, 21%);
     background-image:url(images/bg-pattern-circles.svg);
     background-size: 160%;
     background-attachment: $gradient-body;
@@ -699,7 +622,7 @@ header {
         min-height: rem(400);
         background-size: 70%;
         background-position: rem(-115) rem(-450);
-        border-radius: rem(0) rem(0) rem(0) rem(100);
+        border-radius: rem(0) rem(100) rem(0) rem(100);
     }
     &__container {
          max-width: rem(1050);
@@ -825,27 +748,8 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 992px) {
-    // ========== HEADER SECTION
+// ========== HEADER SECTION
 
 .logo {
     flex: 1;
@@ -853,7 +757,7 @@ footer {
 .menu {
     flex: 1;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .mobile__menu-icon--close {
     display: block;
@@ -928,7 +832,6 @@ footer {
     li:hover {
         transform: translateX(rem(0));
         transition: all 0.5s linear;
-        
         a {
             transition: 0.5s;
             font-weight: $weight-bold;
@@ -936,14 +839,14 @@ footer {
     }
 
 }
-
 .menu-icon {
     img {
-        background-color: $color-cta-text;
-        background-size: 100%;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-repeat: no-repeat;
+        -webkit-text-fill-color: #3221ce;
+        // fill: $color-cta-text;
+        // background-size: 0%;
+        // background-clip: image;
+        // -webkit-text-fill-color: transparent;
+        // background-repeat: repeat;
     }
 }
 
@@ -959,14 +862,9 @@ footer {
     }
 }
 
-
 .hidden {
     display: none;
 }
-
-// .visible {
-//     display: block;
-// }
 
 .icon__rotate {
     img {
@@ -974,10 +872,7 @@ footer {
     }
     @keyframes spin {
         0% {transform: rotate(0deg);}
-        100% {transform: rotate(90deg);}
-        
+        100% {transform: rotate(90deg);} 
     }
 }
-
-
 }
