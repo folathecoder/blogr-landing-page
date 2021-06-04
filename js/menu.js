@@ -21,6 +21,11 @@ if (tablet.matches) {
         icon.setAttribute('src', 'images/icon-arrow-dark.svg');
     })
 }
+else {
+    menuIconImage.forEach(icon => {
+        icon.setAttribute('src', 'images/icon-arrow-light.svg');
+    })
+}
 
 //TODO: Mobile dropdown menu
 
