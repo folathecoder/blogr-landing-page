@@ -237,6 +237,20 @@ p, a {
     display: block;
 }
 
+// ====== Fade Sections
+
+section {
+    transition: transform 1s, opacity 1s;
+}
+
+.disabled {
+  
+    transform: translateY(rem(50));
+    opacity: 0;
+}
+
+
+
 // ========== HEADER AND HERO WRAP TO ENABLE BACKGROUND
 .cta__wrap {
     background-image: url(images/bg-pattern-intro.svg), $gradient-sections;
@@ -440,16 +454,16 @@ header {
 //     }
 // }
 
-@keyframes spin {
-    0% {transform: rotate(0deg);}
-    50% {transform: rotate(45deg);}
-    100% {transform: rotate(135deg);}
-}
+// @keyframes spin {
+//     0% {transform: rotate(0deg);}
+//     50% {transform: rotate(45deg);}
+//     100% {transform: rotate(135deg);}
+// }
 
-.nav__menu:hover .close-dropdown {
-    background-color: red;
-    animation: spin 0.5s;
-}
+// .nav__menu:hover .close-dropdown {
+//     background-color: red;
+//     animation: spin 0.5s;
+// }
 
 
 
@@ -460,9 +474,25 @@ header {
     pointer-events: auto;
 }
 
-mobile__menu-icon--close {
+.mobile__menu-icon--close {
     display: none;
 }
+
+
+
+ .icon__rotate {
+    img {
+        animation: spin 0.5s linear both;
+    }
+    @keyframes spin {
+        0% {transform: rotateX(0deg);}
+        100% {transform: rotateX(180deg);}
+        
+    }
+}
+
+
+
 
 // ========== HERO SECTION
 .hero {
@@ -807,6 +837,9 @@ footer {
     display: flex;
     justify-content: end;
 }
+.mobile__menu-icon--close {
+    display: block;
+}
 .desktop__menu {
     display: initial;
     position: absolute;
@@ -886,11 +919,13 @@ footer {
 
 }
 
-.close-dropdown {
+.menu-icon {
     img {
-        background-color: red;
+        background-color: $color-cta-text;
+        background-size: 100%;
         background-clip: text;
-        fill: 100%;
+        -webkit-text-fill-color: transparent;
+        background-repeat: no-repeat;
     }
 }
 
@@ -914,4 +949,17 @@ footer {
 // .visible {
 //     display: block;
 // }
+
+.icon__rotate {
+    img {
+        animation: spin 0.5s linear both;
+    }
+    @keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(90deg);}
+        
+    }
+}
+
+
 }

@@ -9,29 +9,8 @@ const hamburgerClose = document.querySelector('.mobile__menu-icon--close');
 const desktopMenu = document.querySelector('.desktop__menu');
 const navMenu = document.querySelectorAll('.nav__menu');
 const subMenu = document.querySelectorAll('.sub-menu');
-
-// function myFunction(x) {
-//     if (x.matches) { // If media query matches
-//       document.body.style.backgroundColor = "yellow";
-//     } else {
-//      document.body.style.backgroundColor = "pink";
-//     }
-//   }
-  
-//   var x = window.matchMedia("(max-width: 700px)")
-//   myFunction(x) // Call listener function at run time
-//   x.addListener(myFunction) // Attach listener function on state changes
-
-
-// let mqTablet = window.matchMedia("(max-width: 992px)");
-
-// if (mqTablet.matches) {
-//     body.style.backgroundColor = '#3221ce';
-//     console.log(`Folarin`)
-// }
-// else {
-//     body.style.backgroundColor = '#ffffff';
-// }
+const menuIcon = document.querySelectorAll('.menu-icon');
+const allSections = document.querySelectorAll('section');
 
 //TODO: Mobile dropdown menu
 
@@ -42,7 +21,6 @@ const hamburgerOpened = function (e) {
     hamburgerOpen.classList.add('hidden');
     desktopMenu.classList.add('desktop__menu--active');
 }
-
 const hamburgerClosed = function (e) {
     hamburgerClose.classList.add('hidden');
     hamburgerOpen.classList.remove('hidden');
@@ -54,31 +32,41 @@ hamburgerClose.classList.add('hidden');
 hamburgerOpen.addEventListener('click', e => {
     hamburgerOpened();
 })
-
 hamburgerClose.addEventListener('click', e => {
     hamburgerClosed();
 })
 
-
 //* Sub-Menu Dropdown
-
 subMenu.forEach( menu => {
     menu.classList.add('hidden');
 })
 
-desktopMenu.addEventListener('click', e => {
+
+//* Function to toggle menu classes
+const menuToggles = function (e) {
 
     if (e.target.closest('.nav__menu')) {
+        menuIcon.forEach( icon => {
+            icon.classList.remove('icon__rotate')
+        })
         const clicked = e.target.closest('.nav__menu');
-
         const subDrop = document.querySelector(`.sub-menu--${clicked.dataset.dropdown}`);
-
         subDrop.classList.toggle('hidden');
+        const iconDrop = document.querySelector(`.close-dropdown--${clicked.dataset.dropdown}`);
+        iconDrop.classList.toggle('icon__rotate');
+    }
+} 
 
-        // console.log(subDrop);
+desktopMenu.addEventListener('click', e => {
+    menuToggles(e);
+})
+body.addEventListener('mouseout', e => {
+    if (!e.target.closest('.nav__menu')) {
+        menuIcon.forEach( icon => {
+            icon.classList.remove('icon__rotate')
+        })
     }
 })
-
 
 //TODO: Fade sibling menu links and logo when hovered
 
@@ -105,4 +93,21 @@ headerContainer.addEventListener('mouseover', function (e) {
 })
 headerContainer.addEventListener('mouseout', function (e) {
     menuFade(e, 1);
+})
+
+//TODO: Fade In Sections 
+const fadeCallback = function(entries) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+    entry.target.classList.remove('disabled');
+    observer.unobserve(entry.target);
+}
+const fadeOptions = {
+    root: null,
+    threshold: 0.2,
+}
+const sectionFadeIn = new IntersectionObserver(fadeCallback, fadeOptions);
+allSections.forEach( section => {
+    sectionFadeIn.observe(section);
+    section.classList.add('disabled');
 })
