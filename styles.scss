@@ -147,9 +147,9 @@ body {
 a {
     text-decoration: none;
 }
-a:focus {
-    outline: rem(2) solid hsl(60, 100%, 50%);
-}
+// a:focus {
+//     outline: rem(2) solid tr;
+// }
 h1 {
     font-size: rem(33);
     line-height: rem(40);
